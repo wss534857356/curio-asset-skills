@@ -1,0 +1,29 @@
+{
+  "purpose": "Design templates to adapt, not an implemented runtime API or measured C12 dimensions",
+  "coordinate_frame": { "units": "mm", "origin": "girdle_or_plate_midplane_center", "front_axis": "+Y", "width_axis": "X", "length_axis": "Z" },
+  "examples": [
+    {
+      "id": "oval_shallow_back",
+      "form": "cabochon",
+      "outline": { "kind": "ellipse", "width": 28, "length": 38 },
+      "girdle_thickness": 0.8,
+      "front": { "style": "cubic_profile", "rise": 9.0, "normalized_radius_height_controls": [[0, 1], [0.55, 1], [1, 0.58], [1, 0]] },
+      "back": { "style": "shallow_cubic_profile", "rise": 2.2, "normalized_radius_height_controls": [[0, 1], [0.60, 1], [1, 0.36], [1, 0]] },
+      "profile_mapping": { "front_y": "+girdle_thickness / 2 + front.rise * profile_height", "back_y": "-girdle_thickness / 2 - back.rise * profile_height" },
+      "setting": { "kind": "open_gallery", "support": "annular_band_near_girdle", "derive_contact_from_final_back_surface": true, "fasteners": "two_end_claws" },
+      "inspection": ["front", "back", "side", "stone_out", "support_contact", "release_path", "reassembly"]
+    },
+    {
+      "id": "flat_jade_plaque",
+      "form": "plaque",
+      "outline": { "kind": "rounded_rectangle", "width": 28, "length": 42, "corner_radius": 3.0 },
+      "thickness": 3.6,
+      "front": { "style": "plane", "surface_decoration": "optional_shallow_relief" },
+      "back": { "style": "plane", "independent_uv_orientation": true },
+      "edge_bevel": { "width": 0.55, "adjust_to_local_clearance": true },
+      "cord_hole": { "center_xz": [0, 15], "diameter": 3.2, "through_geometry": true, "rim_bevel": 0.25 },
+      "setting": { "kind": "none" },
+      "inspection": ["front", "back", "side_thickness", "cord_hole_wall", "edge_clearance"]
+    }
+  ]
+}

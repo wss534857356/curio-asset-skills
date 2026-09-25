@@ -1,0 +1,9 @@
+{
+  "schema_version":1,"units":"metres","border_limits_m":[0.018,0.080],"texture_repeat_m":[0.20,0.045],
+  "presets":{
+    "walnut_plain":{"label":"烟褐胡桃木窄框","border_fraction":0.07,"material":"walnut","crown":false,"profile":[[0,0.10],[1,0.10],[1,-0.35],[0.88,-0.55],[0.68,-0.55],[0.30,-0.34],[0.08,-0.40],[0,-0.27]]},
+    "gilt_cove":{"label":"凹线暗金框","border_fraction":0.105,"material":"gilt","crown":false,"profile":[[0,0.13],[1,0.13],[1,-0.38],[0.93,-0.68],[0.76,-0.72],[0.64,-0.43],[0.42,-0.27],[0.22,-0.59],[0.08,-0.57],[0,-0.28]]},
+    "abbey_crown":{"label":"修院红木拱冠框","border_fraction":0.085,"material":"redwood","crown":true,"profile":[[0,0.13],[1,0.13],[1,-0.39],[0.86,-0.66],[0.70,-0.67],[0.54,-0.42],[0.28,-0.32],[0.10,-0.48],[0,-0.26]]},
+    "ebon_silver":{"label":"乌木银线框","border_fraction":0.08,"material":"ebon","crown":false,"profile":[[0,0.12],[1,0.12],[1,-0.42],[0.88,-0.58],[0.56,-0.58],[0.38,-0.36],[0.13,-0.48],[0,-0.24]]}
+  }
+}

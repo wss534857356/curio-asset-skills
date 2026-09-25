@@ -1,0 +1,4 @@
+interface:
+  display_name: "工件打磨与复装"
+  short_description: "按材料设计蓝图刻线、连续去料、轻吸附与报废重购，再替换标准零件供玩家复装"
+  default_prompt: "使用 $curio-part-finishing 为拆开的零件设计蓝图打磨修复方案，包含材料和工具、连续去料、轻吸附、报废重购、合格标准件替换与手动复装。"

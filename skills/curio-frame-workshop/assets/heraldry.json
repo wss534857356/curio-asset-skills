@@ -1,0 +1,16 @@
+{
+  "schema_version":1,"style":"原创动物小纹章，不预设剧情家族名",
+  "families":{
+    "rabbit":{"label":"兔徽","motif":"并立长耳、兔首和细月弧","detail":"耳内沟、小眼、短鼻","palette":"旧银或象牙釉配暗铜"},
+    "wolf":{"label":"狼徽","motif":"尖耳、楔形长吻、外张颊毛","detail":"斜眼、额刻、鼻尖；不替换成海浪","palette":"黑铁配磨亮银棱"},
+    "red_deer":{"label":"赤鹿徽","motif":"长脸鹿首与分叉鹿角","detail":"角枝间留空，颈部收尖","palette":"深红铜或暗金"},
+    "bear":{"label":"熊徽","motif":"圆耳、宽额、厚圆吻","detail":"小眼、宽鼻和短口线","palette":"古铜配烟黑凹槽"},
+    "tiger":{"label":"虎徽","motif":"短圆耳、宽颊与额部三道虎纹","detail":"额纹和侧斜纹分开；不画成猞猁","palette":"旧金配黑色刻纹"}
+  },
+  "carriers":{
+    "edge":{"label":"边沿小牌","aspect":0.76,"glyph_fraction":0.66,"outline":"compact_lozenge","design":"窄菱牌，上下短刻槽，动物居中"},
+    "center":{"label":"中央冠章","aspect":0.92,"glyph_fraction":0.74,"outline":"shield","design":"小盾形，外圈细珠线，可从上沿突出"},
+    "corner":{"label":"四角扣章","aspect":1.0,"glyph_fraction":0.66,"outline":"corner_plate","design":"削角方牌与折角刻线，动物保持正立"}
+  },
+  "placements":["none","edge_centers","top_center","four_corners","canvas_center"]
+}

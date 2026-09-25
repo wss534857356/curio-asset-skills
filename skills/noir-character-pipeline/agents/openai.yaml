@@ -1,0 +1,4 @@
+interface:
+  display_name: "Noir 人物与法线制作"
+  short_description: "制作可动态打光的美漫人物、形体法线与材质，并接入游戏工作台验证"
+  default_prompt: "使用 $noir-character-pipeline 创建一位女性黑猫药剂师，包含形体法线，并接入当前项目的人物工作台。"

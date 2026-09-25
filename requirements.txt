@@ -1,0 +1,4 @@
+# Python helpers and repository validation; Blender supplies its own Python/NumPy.
+Pillow>=10,<13
+numpy>=1.24,<3
+PyYAML>=6,<7

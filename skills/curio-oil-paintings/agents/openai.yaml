@@ -1,0 +1,4 @@
+interface:
+  display_name: "油画真伪与颜料表面"
+  short_description: "制作油画真伪配对、颜料法线以及独立油污和连续补缀图层"
+  default_prompt: "使用 $curio-oil-paintings，为这幅动物油画制作真伪配对及配准材质，保留原图并单独添加油污和补缀。"

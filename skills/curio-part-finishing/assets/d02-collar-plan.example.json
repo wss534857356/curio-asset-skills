@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "status": "design-only",
+  "asset_id": "D02-collar-repair",
+  "title": "眠鹿圣油壶：缺失颈圈的蓝图打磨与复装",
+  "source": {
+    "model": "public/assets/animal-collection-20260914/d-meshy-models/D02-mesh-split-r01.glb",
+    "root": "ASSET_D02_SPLIT",
+    "canonical_parts": [
+      "D02_collar_px",
+      "D02_collar_nx"
+    ],
+    "keep_parts": [
+      "D02_body",
+      "D02_lid",
+      "D02_handle"
+    ],
+    "reference": null,
+    "verified": "2026-09-24: node names and local hero image inspected",
+    "units": "uncalibrated-native",
+    "assembly_status": "zero-clearance split preview; clearance and mounting motion still require author validation",
+    "reference_note": "Supply your own model manifest; the original D02 model and manifest are not distributed in this collection."
+  },
+  "damage": {
+    "kind": "missing-components",
+    "hidden_nodes": [
+      "D02_collar_px",
+      "D02_collar_nx"
+    ],
+    "visible": "颈部留下原接触面与护圈边界；壶身、盖与鹿角保持原样。",
+    "old_hoof_pad_story": "不作为本单主缺损；可留另一订单背景。"
+  },
+  "stock": {
+    "material_id": "brass",
+    "shop_group": "铜料",
+    "sku": "brass-collar-blank",
+    "label": "黄铜颈圈毛坯",
+    "count_per_attempt": 1,
+    "required_finished_parts": 2,
+    "initial_supply": "物主只送缺件壶；玩家购买或使用已购库存，不免费附重试料。",
+    "price_silver_proposed": 12,
+    "price_status": "提案值，当前游戏无此独立SKU",
+    "shape": "厚扁块，内弧加工侧开放；不预制完整半圈。两片各用对应蓝图，不互相镜像冒用。",
+    "blank_rule": "包住简化目标体，外缘、内弧、两端都留真实可去余量；初始形似度不得已达到合格。",
+    "consumption": "预留一块，首次去料耗用；报废必须再用另一块已购料，库存不足则购买。"
+  },
+  "fixture": {
+    "type": "台面软爪小台钳＋可旋转夹头",
+    "grip": "夹住预留工艺耳，换夹后处理耳根；不夹原陶壶进行锉削。",
+    "views": [
+      "主视外轮廓",
+      "内弧侧视",
+      "端面与背面"
+    ],
+    "camera": "桌前有限俯视/旋转，100%—200%；换夹时工具离面，机位稳定。",
+    "coordinates": "标准件边界归一到夹具局部坐标；加工件、蓝图与成品使用同一安装矩阵，不按每件单独任意缩放。"
+  },
+  "blueprint": {
+    "source": "分别从两个原颈圈节点简化轮廓、厚度和配合面；装饰花纹留给标准件。",
+    "lines": {
+      "target": "浅蓝刻线",
+      "allowance": "淡蓝误差带",
+      "waste": "低对比斜线余量",
+      "danger": "削薄时在相关边缘给红色预警，非碰撞保护墙"
+    },
+    "required_features": [
+      "半圈连续外沿",
+      "可抱颈的内弧",
+      "两端合口/紧固肩",
+      "端面和背面厚度"
+    ],
+    "representation": "曲面高度场或局部去料场，明确开口可达；不能仅擦除颜色"
+  },
+  "tools": [
+    {
+      "id": "flat-coarse-file",
+      "use": "大余量与端面",
+      "relative_rate": 0.85
+    },
+    {
+      "id": "half-round-file",
+      "use": "内弧与转角",
+      "relative_rate": 0.55
+    },
+    {
+      "id": "fine-file",
+      "use": "接近样线、去毛刺",
+      "relative_rate": 0.3
+    }
+  ],
+  "input": {
+    "cut": "按住并拖动手锉，仅真实接触行程去料；点按/静止为零",
+    "orbit": "另用空白区域或专用旋转手势，工具抬起才换夹",
+    "sweep": "插值连续工具轨迹，跨边快拖同样检查去料和失败",
+    "assistance": {
+      "capture_css_px": 6,
+      "release_css_px": 10,
+      "max_blend": 0.18,
+      "allow_escape": true,
+      "stop_at_target": false,
+      "auto_trace": false,
+      "parameter_status": "初版待手感调参"
+    }
+  },
+  "grading": {
+    "shape_metric": "100 * intersection(remaining,target) / union(remaining,target)",
+    "shape_pass_percent": 85,
+    "max_missing_ratio_for_pass": 0.05,
+    "min_wall_fraction_for_pass": 0.6,
+    "hard_checks": [
+      "两个端面仍可配合",
+      "半圈连通",
+      "内弧和背面均已加工到模板范围"
+    ],
+    "scrap": {
+      "missing_ratio_above": 0.05,
+      "min_wall_fraction_below": 0.6,
+      "broken_bridge": true,
+      "critical_joint_removed": true
+    },
+    "note": "都是宽松游戏阈值，不是制造公差；未达合格但未报废时仍可继续磨。"
+  },
+  "replacement": {
+    "trigger": "合格后抬起工具",
+    "per_part": true,
+    "from": "player_work_mesh",
+    "to": "对应原始颈圈节点的标准造型实例",
+    "retain": [
+      "夹具内位置",
+      "尺度",
+      "朝向",
+      "枢轴",
+      "attemptId及新配材料身份"
+    ],
+    "finish": "短擦屑/量样后同位换模，低动态时直接替换；不移动相机。",
+    "next_state": "finished-part-ready",
+    "auto_install": false,
+    "auto_test": false,
+    "auto_pay": false,
+    "failed_attempt_can_replace": false
+  },
+  "assembly": {
+    "preserve_finished_other_half": true,
+    "pick_from": "台钳旁零件盘",
+    "mount_paths": [
+      "正X半片从正X侧靠颈",
+      "负X半片从负X侧靠颈"
+    ],
+    "path_status": "仅拟定，须对真实标准件验证喉颈、胸部、鹿角净空",
+    "fixtures_to_add": [
+      "局部可见合口连接耳/扣销",
+      "壶体软托"
+    ],
+    "player_actions": [
+      "取一片，转向对应侧并近距对位",
+      "另一半从另一侧装入",
+      "收紧新增接合件",
+      "轻转检查缝隙，再提放壶盖/把手确认不干涉"
+    ],
+    "final_tests": [
+      "两半均安装且紧固",
+      "护圈不滑、不切入陶壶",
+      "盖与柄功能不受影响"
+    ],
+    "on_authored_collision": "修作者标准件/接口；不向已合格玩家扣重买费用"
+  },
+  "state": [
+    "awaiting-stock",
+    "stock-reserved",
+    "shaping",
+    "scrapped",
+    "finished-part-ready",
+    "trial-fitted",
+    "fastened",
+    "tested",
+    "delivered"
+  ],
+  "persistence": {
+    "fields": [
+      "jobId",
+      "partId",
+      "attemptId",
+      "materialLotId",
+      "stockReservedOrConsumed",
+      "removalFieldSnapshot",
+      "fixturePose",
+      "scrapReason",
+      "canonicalReady",
+      "installed",
+      "fastened",
+      "tested"
+    ],
+    "save_at": [
+      "首次去料",
+      "一段拖动结束",
+      "失焦/离开",
+      "报废",
+      "购买新料",
+      "换标准件",
+      "安装/紧固"
+    ],
+    "forbid": [
+      "刷新报废复活",
+      "六/八区次数代替几何",
+      "每帧PNG/NPZ归档",
+      "失败自动生成标准件",
+      "安装前提前repaired"
+    ]
+  },
+  "acceptance": [
+    "原颈圈确实缺失，初始两件不在物上",
+    "手锉连点/静止不去料，沿线拖动才改形",
+    "轻吸附可摆脱；故意磨断或削薄会报废",
+    "报废后刷新保持，12银提案采购一次换一坯，无免费重置",
+    "一半失败不清掉另一半已做好的件",
+    "85%形似且结构合格后同位换标准件，原物仍等手装",
+    "两侧安装、紧固、试用之后才交付"
+  ],
+  "implementation_status": {
+    "model_nodes_verified": true,
+    "concept_image_reused": true,
+    "new_paid_generation": false,
+    "grinding_runtime": false,
+    "stock_runtime": false,
+    "manual_assembly_runtime": false
+  }
+}

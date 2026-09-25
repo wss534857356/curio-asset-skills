@@ -1,0 +1,4 @@
+interface:
+  display_name: "油画框与家族纹章"
+  short_description: "可变尺寸油画框、配准材质和五类家族徽章的独立制作流程"
+  default_prompt: "使用 $curio-frame-workshop，为这幅画选择框型，按画芯比例自动定尺寸，并设计家族徽章挂点。"

@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "scope": "Ten illustrative animal-world painting recipes; adapt identities and authenticity rules to the target project.",
+  "authority": "Example design data from the original project; not instructions to change another game canon.",
+  "canvas_suffix": "Produce the ORIGINAL oil painting canvas image itself, full bleed edge to edge, perfectly frontal and flat, no frame, no border, no gallery, no text, no artist signature, no watermark, no photographic reflections. All humanoid people are coherently anthropomorphic animals, no human skin or pasted animal masks. Old-world medieval river city clothing, painterly oil colour and visible brushwork. Treat the named historic painting only as a broad compositional reference and create a new composition and details.",
+  "recipes": [
+    {
+      "id": "C01",
+      "name": "戴珍珠的灰兔",
+      "ratio": "4:5",
+      "baseline_scene_en": "An adult grey rabbit woman looks back over one shoulder, indigo blue cloth wrapped around the base of her long natural rabbit ears, ivory collar, muted ochre jacket, one tiny pear-shaped pearl earring. Deep umber background. Softly painted grey fur and dignified calm expression. Broad light on the face and one tiny pearl glint. Original animal-world interpretation of the over-the-shoulder composition in Vermeer's Girl with a Pearl Earring. Only rabbit anatomy, not a human face wearing rabbit ears.",
+      "genuine": "单枚珍珠耳环",
+      "forged": "同位置单枚钻石耳坠",
+      "change_type": "pearl_to_diamond",
+      "roster": [
+        "grey_rabbit"
+      ],
+      "details": {
+        "region": "earring",
+        "genuine_object": "pearl",
+        "forged_object": "faceted diamond"
+      },
+      "default_frame": "gilt_cove",
+      "legacy_canvas_role": "candidate-genuine-reference",
+      "semantic_validation": "requires-image-review"
+    },
+    {
+      "id": "C02",
+      "name": "戴黑纱的银狐",
+      "ratio": "2:3",
+      "baseline_scene_en": "An adult silver fox tailor sits calmly in three-quarter view behind a low wall, paws resting naturally together, a sheer black veil falling behind her fox ears. A little piece of her fabric-cutting table and folded cloth remains visible at the lower left. A misty river, an old stone bridge and green distant hills behind her. Original animal-world interpretation of the Mona Lisa composition, soft sfumato, silver grey fur, warm tawny light, full fox muzzle and anatomically coherent paws.",
+      "genuine": "银狐戴黑纱",
+      "forged": "移除黑纱，保留耳朵、脸和背景",
+      "change_type": "remove_veil",
+      "roster": [
+        "silver_fox"
+      ],
+      "details": {
+        "region": "veil and its occluded background"
+      },
+      "default_frame": "walnut_plain",
+      "legacy_canvas_role": "candidate-genuine-reference",
+      "semantic_validation": "requires-image-review"
+    },
+    {
+      "id": "C03",
+      "name": "鸦市换岗",
+      "ratio": "3:2",
+      "baseline_scene_en": "Five anthropomorphic adult townspeople, a grey wolf, raven, badger, goat and rabbit, change watch in a rain-wet medieval gate passage. Each has a distinct natural animal head and practical cloth tunic. One closes a lantern shield, one passes a long staff, another fastens a shoulder cloak, an old key ring hangs at a belt. A diagonal patch of late afternoon light catches wet stone and faces. Original group staging inspired by Rembrandt's Night Watch, coherent five principal figures with peripheral figures only as indistinct shadows, no modern guns, no modern police uniforms.",
+      "genuine": "五位换岗者",
+      "forged": "少一位山羊换岗者",
+      "change_type": "remove_person",
+      "roster": [
+        "wolf",
+        "raven",
+        "badger",
+        "goat",
+        "rabbit"
+      ],
+      "details": {
+        "target": "goat",
+        "genuine_count": 5,
+        "forged_count": 4
+      },
+      "default_frame": "gilt_cove",
+      "legacy_canvas_role": "candidate-genuine-reference",
+      "semantic_validation": "requires-image-review"
+    },
+    {
+      "id": "C04",
+      "name": "窗边倒奶的獾",
+      "ratio": "4:5",
+      "baseline_scene_en": "An adult anthropomorphic badger washerwoman with a headcloth and rolled sleeves quietly pours opaque creamy white milk from a clay jug into a ceramic basin inside a humble abbey guesthouse. Side window on the left, warm white plaster wall, ochre bodice, faded blue skirt, a hand towel and simple coarse linen. Daylight gently illuminates striped badger fur and working paws. Original animal-world domestic painting drawing on Vermeer's Milkmaid composition. Bright restrained interior, not a dark fantasy scene.",
+      "genuine": "倒出乳白不透明牛奶",
+      "forged": "倒出透明清水",
+      "change_type": "milk_to_water",
+      "roster": [
+        "badger"
+      ],
+      "details": {
+        "region": "jug mouth, stream and receiving liquid surface",
+        "legacy_water_image_role": "forged-reference-only"
+      },
+      "default_frame": "walnut_plain",
+      "legacy_canvas_role": "forged-reference-only",
+      "semantic_validation": "requires-image-review"
+    },
+    {
+      "id": "C05",
+      "name": "归来的小狼",
+      "ratio": "3:4",
+      "baseline_scene_en": "A young adult grey wolf kneels before his elderly wolf father, muddy travel cloak and worn plain tunic. The father rests two natural wolf paws gently on the traveller's shoulders. Another adult relative stands back in shadow, undecided. Original animal-world reinterpretation of Rembrandt's Return of the Prodigal Son, warm red-brown and muted gold surround the central figures, dark quiet room, tenderness conveyed through weight and distance rather than tears. All characters visibly adults, no halos.",
+      "genuine": "跪着的成年小狼、老狼父亲和一位成年亲属",
+      "forged": "后方多一名成年狼亲属",
+      "change_type": "add_person",
+      "roster": [
+        "young_adult_wolf",
+        "elder_wolf",
+        "adult_wolf_relative"
+      ],
+      "details": {
+        "added": "second adult wolf relative",
+        "genuine_count": 3,
+        "forged_count": 4
+      },
+      "default_frame": "abbey_crown",
+      "legacy_canvas_role": "candidate-genuine-reference",
+      "semantic_validation": "requires-image-review"
+    },
+    {
+      "id": "C06",
+      "name": "雾桥上的白鹿",
+      "ratio": "3:4",
+      "baseline_scene_en": "A tall adult anthropomorphic white deer traveller in a dark moss-green coat stands with back to the viewer at the end of a weathered stone bridge, holding a walking staff. Complete elegant antlers silhouette into pale mist. Far away only the top of a modest northern abbey bell tower and grey green hills emerge. Original atmospheric painting inspired by Friedrich's Wanderer above the Sea of Fog; large luminous cool grey and ivory sky, believable old bridge masonry, contemplative stillness. No fire, warfare or glowing magic.",
+      "genuine": "一位背向观者的白鹿旅人",
+      "forged": "桥后多一位穿旧斗篷的獾旅人",
+      "change_type": "add_person",
+      "roster": [
+        "white_deer_traveller"
+      ],
+      "details": {
+        "added": "badger traveller behind the principal deer",
+        "genuine_count": 1,
+        "forged_count": 2
+      },
+      "default_frame": "walnut_plain",
+      "legacy_canvas_role": "candidate-genuine-reference",
+      "semantic_validation": "requires-image-review"
+    },
+    {
+      "id": "C07",
+      "name": "两只鸦与睡莲",
+      "ratio": "2:1",
+      "baseline_scene_en": "A wide horizontal oil painting of water lilies, reflected willow branches and a pale abbey garden wall. Two small adult anthropomorphic raven townspeople in simple clothed silhouettes sit together on a low stone bank in the lower corner with a folded paper parcel beside them. Most of the picture is pale green, lavender and ivory water and brushwork. Original animal-world landscape drawing on Monet's Water Lilies, painterly rather than photographic reflections, the ravens small but clearly clothed neighbours, peaceful daylight.",
+      "genuine": "岸边两只着衣乌鸦",
+      "forged": "岸边只剩一只着衣乌鸦",
+      "change_type": "remove_person",
+      "roster": [
+        "raven_left",
+        "raven_right"
+      ],
+      "details": {
+        "target": "raven_right",
+        "genuine_count": 2,
+        "forged_count": 1
+      },
+      "default_frame": "walnut_plain",
+      "legacy_canvas_role": "candidate-genuine-reference",
+      "semantic_validation": "requires-image-review"
+    },
+    {
+      "id": "C08",
+      "name": "夜班后的热汤",
+      "ratio": "5:4",
+      "baseline_scene_en": "Five tired adult anthropomorphic workers, a fox, a badger, an owl and two distinct rabbits, sit around a small table under one suspended oil lamp after a night shift. Bowls of soup, bread and coarse clay cups, tools rest against a plain wall. Each animal has clear species anatomy and a different working-paw posture; nobody poses for the viewer. Original painting inspired by Van Gogh's Potato Eaters, earthy olive brown, warm ochre and dark red, expressive coarse oil brushwork, humane and intimate, no animal meat and no modern objects.",
+      "genuine": "狐狸、獾、猫头鹰和两只不同兔子共五位工人",
+      "forged": "少了猫头鹰，共四位工人",
+      "change_type": "remove_person",
+      "roster": [
+        "fox",
+        "badger",
+        "owl",
+        "rabbit_left",
+        "rabbit_right"
+      ],
+      "details": {
+        "target": "owl",
+        "genuine_count": 5,
+        "forged_count": 4
+      },
+      "default_frame": "walnut_plain",
+      "legacy_canvas_role": "candidate-genuine-reference",
+      "semantic_validation": "requires-image-review"
+    },
+    {
+      "id": "C09",
+      "name": "灰桥议价人",
+      "ratio": "5:4",
+      "baseline_scene_en": "An elderly anthropomorphic goat and a younger adult fox sit on opposite sides of a wooden table, negotiating over a folded length of indigo cloth. Copper coins sit in two shallow dishes. Both lean slightly forward, practical old-world coats and animal paws, quiet concentrated expressions. Original animal-world reinterpretation of Cezanne's Card Players, stable broad blocks of ochre, slate blue and reddish brown, substantial painted forms, no playing cards, no readable numbers or writing.",
+      "genuine": "老山羊与年轻狐狸两位议价者",
+      "forged": "桌边多一位獾见证人",
+      "change_type": "add_person",
+      "roster": [
+        "elder_goat",
+        "young_adult_fox"
+      ],
+      "details": {
+        "added": "adult badger witness beside the table",
+        "genuine_count": 2,
+        "forged_count": 3
+      },
+      "default_frame": "gilt_cove",
+      "legacy_canvas_role": "candidate-genuine-reference",
+      "semantic_validation": "requires-image-review"
+    },
+    {
+      "id": "C10",
+      "name": "抱空匣的雪豹",
+      "ratio": "3:4",
+      "baseline_scene_en": "An adult anthropomorphic snow leopard woman holds an OPEN EMPTY small jewellery box against a pearl-grey blouse and wine-red shawl, turning slightly to listen to someone outside the picture. The entire empty box interior is visible, containing only faded blue silk padding, absolutely no stone or jewel. Naturally integrated feline muzzle, delicate spots and softly curled paws. Original Renaissance-style composition drawing on Leonardo's Lady with an Ermine, dark blue-brown background, restrained light and sophisticated small brushwork. No pet animal in her arms.",
+      "genuine": "打开的匣内只有褪色蓝衬布",
+      "forged": "匣内多一枚小金戒指",
+      "change_type": "empty_box_to_ring",
+      "roster": [
+        "snow_leopard"
+      ],
+      "details": {
+        "region": "visible box interior only",
+        "genuine_object": "empty faded blue silk lining",
+        "forged_object": "one small painted gold ring"
+      },
+      "default_frame": "gilt_cove",
+      "legacy_canvas_role": "candidate-genuine-reference",
+      "semantic_validation": "requires-image-review"
+    }
+  ]
+}

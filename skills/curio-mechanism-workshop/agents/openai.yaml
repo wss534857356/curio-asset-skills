@@ -1,0 +1,4 @@
+interface:
+  display_name: "机关藏品制作"
+  short_description: "按概念图还原器形，精密机关用代码，浅浮雕用法线，复杂立体件用 Meshy"
+  default_prompt: "使用 $curio-mechanism-workshop 为游戏制作一件可拆装机关藏品，完成概念图、机关粗模与外形精修，并验收装配、形体还原、UV、远观模型和像素图标。"

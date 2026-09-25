@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evolve Blender Assets"
+  short_description: "Build and quality-gate reusable Blender assets"
+  default_prompt: "Use $evolve-blender-assets to build, admit, or iterate a Blender asset with frozen evidence, content-bound GLB validation, and engine-ready semantics when required."

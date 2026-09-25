@@ -1,0 +1,4 @@
+interface:
+  display_name: "珠宝与玉牌制作"
+  short_description: "制作可翻看、可拆镶座的宝石与玉牌，处理正背面曲率、厚度、材质和游戏接入"
+  default_prompt: "使用 $curio-jewelry-workshop 处理这件珠宝，明确正背面、厚度与镶座关系，按我要求的范围完成设计或制作，并核对实际可见效果。"

@@ -1,0 +1,21 @@
+{
+  "id": "example-rabbit",
+  "name": "戴珍珠的灰兔",
+  "ratio": "4:5",
+  "baseline_scene_en": "An adult grey rabbit woman looks back over one shoulder, indigo blue cloth wrapped around the base of her long natural rabbit ears, ivory collar, muted ochre jacket, one tiny pear-shaped pearl earring. Deep umber background. Softly painted grey fur and dignified calm expression. Broad light on the face and one tiny pearl glint. Original animal-world interpretation of the over-the-shoulder composition in Vermeer's Girl with a Pearl Earring. Only rabbit anatomy, not a human face wearing rabbit ears.",
+  "genuine": "单枚珍珠耳环",
+  "forged": "同位置单枚钻石耳坠",
+  "change_type": "pearl_to_diamond",
+  "roster": [
+    "grey_rabbit"
+  ],
+  "details": {
+    "region": "earring",
+    "genuine_object": "pearl",
+    "forged_object": "faceted diamond"
+  },
+  "default_frame": "gilt_cove",
+  "legacy_canvas_role": "candidate-genuine-reference",
+  "semantic_validation": "requires-image-review",
+  "legacy_canvas_relative": "reference-inputs/rabbit-canvas.png"
+}

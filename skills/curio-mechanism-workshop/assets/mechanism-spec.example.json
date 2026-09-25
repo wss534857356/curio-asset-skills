@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "example_only": true,
+  "asset_id": "owl-music-box",
+  "brief": "胡桃木与黄铜短曲匣，猫头鹰浮雕为示例装饰，制作具体人物藏品时核对正史",
+  "dimensions_m": [0.32, 0.18, 0.14],
+  "visual_design": {
+    "concept_reference": "concept.png",
+    "silhouette": "切角八边轮廓，浅盖与较深盒身，分层线脚和短车木脚",
+    "features_to_preserve": ["盖与盒身的切角一致", "盖缘和底座具有不同截面", "侧面嵌板内凹", "薄绒衬与金属结构有厚度区别"],
+    "geometry_routes": {"shell_and_moulding": "code profile extrusion", "feet": "code lathe", "relief": "imagegen-normal"},
+    "comparison": ["matching three-quarter concept and model views", "untextured shape", "game at 100 and 200 percent"],
+    "note": "示例器形按具体人物和用途替换；矩形藏品也可保留矩形，不强加曲线装饰"
+  },
+  "coordinates": {
+    "units": "meters",
+    "authoring_up": "+Z",
+    "authoring_front": "-Y",
+    "runtime_up": "+Y",
+    "runtime_front": "+Z",
+    "conversion": "Blender glTF exporter, once",
+    "root_origin": "bottom-center of support plane"
+  },
+  "mechanism": {
+    "input": "转动侧面曲柄给发条上弦",
+    "transmission": "发条经减速传动带动滚筒；凸钉拨动固定音梳",
+    "fault": "音梳横向偏移，凸钉不能正确拨片",
+    "repair": "打开盖板，校正音梳与滚筒，复装，上弦试用",
+    "simulation": "kinematic, not rigid-body physics"
+  },
+  "parts": [
+    {"id": "body", "node": "BODY", "parent": "ROOT", "route": "code-uv", "shape": "open chamfer-corner shell with stepped moulding and recessed side panels", "visual_subparts": ["profiled lower rim", "recessed wall panels", "short turned feet"], "dimensions_m": [0.32, 0.18, 0.12], "wall_m": 0.008, "material": "shared-walnut", "uv": "panel mapping, grain along board length and consistent moulding scale", "support_z_m": 0},
+    {"id": "lid", "node": "LID_PANEL", "parent": "LID_PIVOT", "route": "code-uv", "shape": "matching chamfer-corner lid with a worked rim and recessed lining", "dimensions_m": [0.32, 0.18, 0.012], "local_center_m": [0, -0.09, 0.006], "material": "shared-walnut"},
+    {"id": "relief", "node": "OWL_RELIEF", "parent": "LID_PANEL", "route": "imagegen-normal", "dimensions_m": [0.11, 0.07, 0.002], "material": "aged-brass", "interface": "simple beveled plate on lid top", "maps": ["albedo", "normal", "roughness", "metallic"], "height_source": "registered relief guide, not albedo brightness", "max_relief_depth_m": 0.001, "silhouette_changes": false, "carrier_triangle_target": 48},
+    {"id": "drum", "node": "MUSIC_DRUM", "parent": "DRUM_PIVOT", "route": "code-uv", "dimensions_m": [0.13, 0.045, 0.045], "material": "shared-brass", "interface": "bearings and comb spacing fixed by blockout"},
+    {"id": "comb", "node": "REED_COMB", "parent": "COMB_SLIDE", "route": "code-uv", "dimensions_m": [0.13, 0.045, 0.004], "material": "spring-steel", "removal_direction": "+Z", "tray_position_m": [0.24, -0.04, 0.004]},
+    {"id": "crank", "node": "WINDING_CRANK", "parent": "CRANK_PIVOT", "route": "code-uv", "material": "shared-brass", "interface": "axis through right side wall"}
+  ],
+  "joints": [
+    {"node": "LID_PIVOT", "parent": "BODY", "type": "revolute", "pivot_m": [0, 0.09, 0.12], "axis": [1, 0, 0], "limits_degrees": [-105, 0], "closed_degrees": 0},
+    {"node": "DRUM_PIVOT", "parent": "BODY", "type": "revolute", "pivot_m": [0, 0.025, 0.065], "axis": [1, 0, 0], "continuous": true},
+    {"node": "COMB_SLIDE", "parent": "BODY", "type": "prismatic", "pivot_m": [0, -0.025, 0.06], "axis": [1, 0, 0], "limits_m": [-0.008, 0.008], "repaired_m": 0},
+    {"node": "CRANK_PIVOT", "parent": "BODY", "type": "revolute", "pivot_m": [0.17, 0.025, 0.065], "axis": [1, 0, 0], "continuous": true}
+  ],
+  "states": ["intact", "damaged", "disassembled", "repaired"],
+  "repair_steps": [
+    {"id": "open", "kind": "tap", "part": "lid", "requires": [], "effect": "lid at open limit"},
+    {"id": "align", "kind": "adjust", "part": "comb", "requires": ["open"], "target_m": 0, "tolerance_m": 0.0005},
+    {"id": "close", "kind": "tap", "part": "lid", "requires": ["align"], "effect": "lid closed without colliding with drum"},
+    {"id": "wind", "kind": "adjust", "part": "crank", "requires": ["close"], "effect": "spring charged"},
+    {"id": "test", "kind": "run", "part": "crank", "requires": ["wind"], "duration_seconds": 3, "success": "drum turns and notes play without visible snagging"}
+  ],
+  "budgets": {"mid_triangles_total": 25000, "display_triangles_total": 2500, "runtime_texture_max_px": 2048, "shared_material_target": 4},
+  "icon": {"native_size_px": [64, 64], "small_variant_px": [32, 32], "palette_target": 24, "alpha": true, "reference": "final assembled model", "style": "original hunting-game inventory pixel icon"},
+  "output_names": {"mid": "mid.glb", "display": "display.glb", "icon": "icon-64.png"},
+  "authoring_archive": null,
+  "paid_plan": {"approved_stages": [], "max_credits": null, "task_records": []},
+  "acceptance": ["concept-to-model silhouette and construction comparison", "untextured shape inspection", "support-plane contact", "hinge extremes", "comb alignment", "back and interior", "real mesh picking", "game 100 and 200 percent", "LOD continuity", "native icon readability"]
+}
