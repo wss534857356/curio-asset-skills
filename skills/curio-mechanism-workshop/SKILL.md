@@ -76,6 +76,8 @@ description: Design and build reference-led interactive mechanical collectibles,
 
 Meshy 立体形体通过检查后，用其 Remesh API 经插件 CLI 生成中模，再处理 UV 和最终贴图。纯代码／贴图部件直接整理本地 UV、材质及 LOD，无需为走完流程调用 Meshy。具体命令、API 限制、失败回退见 [Meshy 制作流程](references/meshy-pipeline.md)。
 
+需要实际案例时读 [双獾药秤](references/badger-balance-case.md)：单獾高模降面、UV 重排、R01 烘焙与 R02 贴图修正，最后装配并派生陈列 LOD。区分单件与整物统计，以及每一版真正采用的材质来源。
+
 - “请求 20,000 面”不等于实际输出 20,000 面。下载后测量；分别记录 API 面数、导出三角形数和实例数量。
 - 优先对独立外观件优化，保留代码结构、接口及转轴；中模是可维修的游戏资产，不只是低面数雕塑。
 - 简单几何保留代码 UV。复杂件使用 Meshy UV Unwrap；不可用时在 Blender 展 UV。

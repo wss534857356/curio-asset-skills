@@ -25,6 +25,6 @@ The MIT license on Meshy's integration instructions does not license the hosted 
 
 ## Screenshots and dependencies
 
-The deer vessel previews credit Meshy as the source-model tool; the source generation plan and a separate model-distribution grant are not recorded in this collection. No source model is distributed. See [ASSET_NOTICE.md](ASSET_NOTICE.md) and [image provenance](docs/images/README.md).
+The deer vessel previews and the badger sculpture / balance case credit Meshy as the source-model tool; the source generation plan and a separate model-distribution grant are not recorded in this collection. The badger case includes historical task costs, which do not establish an account plan or model license. No source model is distributed. See [ASSET_NOTICE.md](ASSET_NOTICE.md) and [image provenance](docs/images/README.md).
 
 Blender, Python, Pillow, NumPy, PyYAML, GitHub CLI and any image-generation service are external tools or dependencies with their own licenses. Their executables and credentials are not vendored here. Meshy icons retain their original upstream terms and identity; their presence does not imply endorsement.

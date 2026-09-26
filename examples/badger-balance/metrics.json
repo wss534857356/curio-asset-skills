@@ -1,0 +1,160 @@
+{
+  "asset_id": "A02",
+  "revision": "badger-balance-v1-pbr-r02",
+  "verification_date": "2026-09-26",
+  "count_method": "Read glTF 2 accessors and nodes from local GLB files. Geometry counts include all node instances for runtime budgets, not a measured frame draw count.",
+  "models": [
+    {
+      "file_label": "badger-high.glb",
+      "role": "authoring",
+      "bytes": 32218356,
+      "triangles_stored": 1342390,
+      "triangles_including_instances": 1342390,
+      "primitive_count": 1,
+      "uv0_metadata_valid_primitives": 0,
+      "metadata_audit_failures": []
+    },
+    {
+      "file_label": "badger-mid.glb",
+      "role": "authoring",
+      "bytes": 252380,
+      "triangles_stored": 5212,
+      "triangles_including_instances": 5212,
+      "primitive_count": 1,
+      "uv0_metadata_valid_primitives": 1,
+      "metadata_audit_failures": []
+    },
+    {
+      "file_label": "badger-uv.glb",
+      "role": "authoring",
+      "bytes": 196244,
+      "triangles_stored": 5212,
+      "triangles_including_instances": 5212,
+      "primitive_count": 1,
+      "uv0_metadata_valid_primitives": 1,
+      "metadata_audit_failures": []
+    },
+    {
+      "file_label": "badger-baked.glb",
+      "role": "authoring",
+      "bytes": 3431776,
+      "triangles_stored": 5212,
+      "triangles_including_instances": 5212,
+      "primitive_count": 1,
+      "uv0_metadata_valid_primitives": 1,
+      "metadata_audit_failures": []
+    },
+    {
+      "file_label": "badger-pbr-r02.glb",
+      "role": "authoring",
+      "bytes": 5453716,
+      "triangles_stored": 5212,
+      "triangles_including_instances": 5212,
+      "primitive_count": 1,
+      "uv0_metadata_valid_primitives": 1,
+      "metadata_audit_failures": []
+    },
+    {
+      "file_label": "mid.glb",
+      "role": "runtime",
+      "bytes": 937880,
+      "triangles_stored": 22908,
+      "triangles_including_instances": 28120,
+      "primitive_count": 87,
+      "uv0_metadata_valid_primitives": 87,
+      "metadata_audit_failures": []
+    },
+    {
+      "file_label": "display.glb",
+      "role": "runtime",
+      "bytes": 197996,
+      "triangles_stored": 3284,
+      "triangles_including_instances": 3934,
+      "primitive_count": 87,
+      "uv0_metadata_valid_primitives": 87,
+      "metadata_audit_failures": []
+    },
+    {
+      "file_label": "repaired.glb",
+      "role": "runtime",
+      "bytes": 937964,
+      "triangles_stored": 22908,
+      "triangles_including_instances": 28120,
+      "primitive_count": 87,
+      "uv0_metadata_valid_primitives": 87,
+      "metadata_audit_failures": []
+    },
+    {
+      "file_label": "forged.glb",
+      "role": "runtime",
+      "bytes": 937888,
+      "triangles_stored": 22908,
+      "triangles_including_instances": 28120,
+      "primitive_count": 87,
+      "uv0_metadata_valid_primitives": 87,
+      "metadata_audit_failures": []
+    }
+  ],
+  "runtime_package": {
+    "model_count": 4,
+    "shared_texture_count": 5,
+    "model_bytes": 3011728,
+    "shared_texture_bytes": 6783824,
+    "icon_bytes": 5676,
+    "total_bytes": 9801228
+  },
+  "historical_tasks": [
+    {
+      "stage": "sculpt",
+      "resource": "image-to-3d",
+      "recorded_status": "SUCCEEDED",
+      "historical_consumed_credits": 20
+    },
+    {
+      "stage": "remesh",
+      "resource": "remesh",
+      "recorded_status": "SUCCEEDED",
+      "historical_consumed_credits": 5
+    },
+    {
+      "stage": "uv_unwrap",
+      "resource": "uv-unwrap",
+      "recorded_status": "SUCCEEDED",
+      "historical_consumed_credits": 5
+    },
+    {
+      "stage": "retexture_r02",
+      "resource": "retexture",
+      "recorded_status": "SUCCEEDED",
+      "historical_consumed_credits": 10
+    }
+  ],
+  "r01_bake": {
+    "normal_size": [
+      1024,
+      1024
+    ],
+    "normal_source": "high sculpt to UV-unwrapped low mesh",
+    "normal_space": "tangent",
+    "not_the_final_r02_material": true
+  },
+  "limitations": [
+    "The screenshots are recorded project outputs, not a fresh gameplay run.",
+    "UV attributes and layout visualization do not certify distortion, overlap or bake quality.",
+    "The final R02 model uses retextured PBR inputs, not the earlier local-bake material as its final normal source.",
+    "No paid tasks were submitted for this example.",
+    "Source meshes, full textures, task IDs, credentials and signed URLs are not distributed."
+  ],
+  "uv_layout_visualization": [
+    {
+      "file_label": "badger-mid.glb",
+      "exported_vertices": 6877,
+      "distinct_uv_coordinates": 6854
+    },
+    {
+      "file_label": "badger-uv.glb",
+      "exported_vertices": 5102,
+      "distinct_uv_coordinates": 3459
+    }
+  ]
+}

@@ -6,7 +6,7 @@
 
 Reusable agent skills for game props, oil paintings, jewelry, relightable 2.5D characters, Blender and Meshy. Instructions and tools are included; the showcased game assets are not an asset pack.
 
-[技能目录](#技能目录) · [安装](#安装) · [使用示例](#使用示例) · [工具与验证](docs/usage.md) · [授权说明](#授权)
+[技能目录](#技能目录) · [双獾药秤案例](examples/badger-balance/README.md) · [安装](#安装) · [使用示例](#使用示例) · [工具与验证](docs/usage.md) · [授权说明](#授权)
 
 ## 眠鹿圣油壶：从整件到可检查部件
 
@@ -30,6 +30,16 @@ Reusable agent skills for game props, oil paintings, jewelry, relightable 2.5D c
 
 对应技能：[珠宝与玉牌](skills/curio-jewelry-workshop/SKILL.md)。
 
+## 双獾药秤：降面、展 UV、烘焙与 LOD
+
+![双獾药秤 R02：Meshy 獾雕与代码制作的称量机构](docs/images/badger-balance-assembled.png)
+
+这件药秤记录了完整制作链路：**单獾高模 1,342,390 → Remesh 5,212 个三角形 → 重新展 UV → 烘焙／后续贴图修正 → 装配两只獾与代码机构 → 陈列低模**。
+
+整台秤的近看预算为 **28,120** 个三角形，陈列版为 **3,934**，均计入两只獾的实例。完整案例附真实 UV 布局对照、各阶段文件大小、共享贴图打包和历史实际费用；同时区分 R01 烘焙与 R02 最终材质。
+
+查看：[双獾药秤制作案例](examples/badger-balance/README.md) · [模型／UV 流程](skills/curio-mechanism-workshop/references/meshy-pipeline.md)。
+
 ## 油画：画芯、笔触、织纹和表面层
 
 ![油画材质工作台：画芯与颜料、织纹和表面层对照](docs/images/oil-painting-layers.png)
@@ -52,7 +62,7 @@ Reusable agent skills for game props, oil paintings, jewelry, relightable 2.5D c
 
 | 技能 | 用途 | 随附内容 |
 |---|---|---|
-| [curio-mechanism-workshop](skills/curio-mechanism-workshop/SKILL.md) | 机关藏品、修理道具、LOD、图标 | 规格模板、材质／Meshy 路线、GLB 检查器 |
+| [curio-mechanism-workshop](skills/curio-mechanism-workshop/SKILL.md) | 机关藏品、降面、展 UV、LOD、图标 | 规格模板、材质／Meshy 路线、GLB 检查器、双獾药秤案例 |
 | [mesh-split-fill](skills/mesh-split-fill/SKILL.md) | 网格拆件、接缝与互补补面 | Blender 入口、几何工具、真实过程页；第三方 MIT |
 | [curio-oil-paintings](skills/curio-oil-paintings/SKILL.md) | 动物油画、配准真伪画芯、颜料与污渍 | 10 个配方、任务准备与表面生成脚本 |
 | [curio-frame-workshop](skills/curio-frame-workshop/SKILL.md) | 可复用画框、尺寸适配、动物纹章 | Blender 生成器、4 种框型、5 种纹章 |
