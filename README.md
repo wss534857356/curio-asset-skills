@@ -131,5 +131,3 @@ python -m unittest discover -s skills/mesh-split-fill/tests -v
 - **第三方技能：保留原 MIT 与署名**。`mesh-split-fill` 归 WentianYi2025，`meshy-3d-generation` 归 Meshy；来源和快照信息见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 - **图库截图仅用于展示，不随代码授予 MIT 素材使用许可**，见 [ASSET_NOTICE.md](ASSET_NOTICE.md)。仓库不分发对应模型、角色原图或游戏素材包。
 - Meshy、Blender、图像服务各自的产品、生成资产和商标权利由其相应条款约束。本集合是独立整理，不代表这些项目的官方背书。
-
-想分享制作过程，可从 [社交媒体文案草稿](docs/share-copy.zh-CN.md) 开始。
