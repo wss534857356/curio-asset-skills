@@ -1,6 +1,6 @@
 ---
 name: curio-mechanism-workshop
-description: Design and build reference-led interactive mechanical collectibles, matching ImageGen concepts in silhouette and construction, with coded mechanisms, relief textures, Meshy forms, UVs, LODs and pixel icons. Use for hinged boxes, locks, music boxes, lamps and repair props; prefer normal maps for shallow relief and Meshy for complex volumes. Also covers first-use stalls in these interactions. Not character rigging or physical 3D printing.
+description: Design and build reference-led interactive mechanical collectibles, matching ImageGen concepts in silhouette and construction, with coded mechanisms, relief textures, Meshy forms, UVs, LODs and pixel icons. Use for hinged boxes, locks, music boxes, lamps and repair props; prefer normal maps for shallow relief and Meshy for complex volumes. Also covers first-use stalls and fragmented surface outlines in game. Not character rigging or physical 3D printing.
 ---
 
 # 机关藏品制作
@@ -94,6 +94,7 @@ Meshy 立体形体通过检查后，用其 Remesh API 经插件 CLI 生成中模
 
 ## 7. 验收与交付
 
+- 藏品出现三角碎线、裂纹感或过重描边时，读 [表面碎线诊断](references/surface-artifacts.md)，用同机位对照区分后处理、法线、阴影与真实几何问题，再决定调显示还是修模型。
 - 新增或改动点火、开灯、切材质等运行时交互时，核对首次操作、复位与再次操作。出现首次卡顿时读 [首次交互性能](references/first-interaction-performance.md)，按编译、资源准备和持续渲染成本分别取证。
 - 外形与玩法分别验收：先比较概念图和最终模型的相近视角，再看无贴图形体、游戏 100%／200% 实机效果。轮廓或构造明显缺失时继续修形，不能用面数、UV 或流程测试通过代替外观验收。
 - 在 Blender 或对应工具中检查实际装配，再在游戏运行时验证准确的导出文件。查看整体、背面、打开和拆件后的画面。

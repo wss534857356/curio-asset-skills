@@ -117,6 +117,8 @@ python tools/install.py --target ../my-game/.agents/skills --all
 
 运行时案例：[提灯首次点火卡顿](skills/curio-mechanism-workshop/references/first-interaction-performance.md)，包含原因、诊断分支、稳定灯光配置的修复及首次／重复操作验证。
 
+视觉案例：[表面碎线与过重描边](skills/curio-mechanism-workshop/references/surface-artifacts.md)，通过白狼匣、舞匣等实例区分后处理、法线、阴影与真实几何缺陷，避免为了显示问题重复重拓扑或展开 UV。
+
 ```sh
 python -m pip install -r requirements.txt
 python tools/validate.py
