@@ -2,11 +2,11 @@
 
 **把参考图做成可检视、可拆装、可重新打光的游戏资产。**
 
-从一款中世纪动物世界游戏的制作过程中整理出的 **9 个 AI 编程代理技能**：机关藏品、拆件补面、油画、画框、宝石玉牌、人物法线，以及 Meshy 和 Blender 资产流程。中文工作流为主，包含提示词、参数示例、Python 工具与验收方法。
+从一款中世纪动物世界游戏的制作过程中整理出的 **9 个 AI 编程代理技能**：机关藏品、拆件补面、零件加工、油画、画框、珠宝与钻石切型、人物法线，以及 Meshy 和 Blender 资产流程。中文工作流为主，包含提示词、参数示例、Python 工具与验收方法。
 
-Reusable agent skills for game props, oil paintings, jewelry, relightable 2.5D characters, Blender and Meshy. Instructions and tools are included; the showcased game assets are not an asset pack.
+Reusable agent skills for game props, oil paintings, faceted diamonds and gemstones, jewelry, relightable 2.5D characters, Blender and Meshy. Instructions and tools are included; the showcased game assets are not an asset pack.
 
-[技能目录](#技能目录) · [双獾药秤案例](examples/badger-balance/README.md) · [安装](#安装) · [使用示例](#使用示例) · [工具与验证](docs/usage.md) · [授权说明](#授权)
+[技能目录](#技能目录) · [切面宝石案例](examples/faceted-gems/README.md) · [双獾药秤案例](examples/badger-balance/README.md) · [安装](#安装) · [使用示例](#使用示例) · [工具与验证](docs/usage.md) · [授权说明](#授权)
 
 ## 眠鹿圣油壶：从整件到可检查部件
 
@@ -28,13 +28,28 @@ Reusable agent skills for game props, oil paintings, jewelry, relightable 2.5D c
 
 截图版本采用前拱、平底封盖；技能进一步整理了**独立前后贝塞尔截面、浅拱背、切面亭部、实体玉牌**的选择方法。它提供设计与建模工作流，不附带截图中的游戏构造器。
 
-对应技能：[珠宝与玉牌](skills/curio-jewelry-workshop/SKILL.md)。
+对应技能：[珠宝与钻石切型](skills/curio-jewelry-workshop/SKILL.md)。
 
 ## 钻石与异形裸石：切面结构、透射和陈列
 
-新增圆钻、心形、阶梯式等十种切型的结构方法，以及“反光很强却看不见后景”“陈列发白像塑料”“首次拿起编译卡顿”的定位与处理。贝塞尔曲线用于需要的轮廓；光学切面保持平面，真实面数与三角形数分别统计。
+从十种裸石的制作中整理出 **圆钻、椭圆、梨形、马眼、心形、公主方、祖母绿式、阿斯切、枕形、玫瑰式** 的结构方法。分别处理外轮廓、冠部、腰棱和亭部；贝塞尔曲线用于需要的轮廓，光学切面保持平面。
 
-查看 [切面裸石案例与红蓝后景对照](examples/faceted-gems/README.md) · [切面设计](skills/curio-jewelry-workshop/references/faceted-cuts.md) · [透射与陈列](skills/curio-jewelry-workshop/references/transmission-and-display.md)。
+| 要解决的问题 | 技能中的方法 |
+|---|---|
+| 切面像鼓起的塑料，或加面后仍没有切割层次 | 平面求交、逐面法线；分别统计设计光学面和实际三角形 |
+| 心形凹口被填平，尖端或背面破面 | 凹多边形三角化、针对轮廓选择支撑面，明确底尖、底脊或平底 |
+| 反光很强，却看不见宝石后面的物体 | 排查不透明内壳，以固定相机的红蓝后景与白条验证透射 |
+| 陈列发白，或拿起时突然变色、首次卡顿 | 区分底色与受光烘焙，统一厚度和吸收距离，复用环境并准备实际材质变体 |
+
+下面是同一长阶宝石的透射检查：只改变后方平面的颜色，白条经过切面后发生偏折。
+
+| 红色后景 | 蓝色后景 |
+|:---:|:---:|
+| ![同一长阶宝石透过红色后景与白条](docs/images/gem-transmission-red.png) | ![同一长阶宝石透过蓝色后景与白条](docs/images/gem-transmission-blue.png) |
+
+这组已保存的项目对照图展示屏幕空间体积透射，不代表完整多次光线追踪或真实钻石物性认证。图像版本和十种模型的实际统计见 [完整案例](examples/faceted-gems/README.md)。
+
+对应技能：[珠宝与钻石切型](skills/curio-jewelry-workshop/SKILL.md) · 按需阅读：[切面设计](skills/curio-jewelry-workshop/references/faceted-cuts.md)、[透射与陈列](skills/curio-jewelry-workshop/references/transmission-and-display.md)。
 
 ## 双獾药秤：降面、展 UV、烘焙与 LOD
 
@@ -108,6 +123,10 @@ python tools/install.py --target ../my-game/.agents/skills --all
 ## 使用示例
 
 ```text
+使用 $curio-jewelry-workshop，制作圆钻、心形和阶梯式裸石，分别设计冠部、腰棱与亭部，核对正背面闭合和逐面法线。
+
+使用 $curio-jewelry-workshop，排查这颗宝石拿近后不透后景的问题，用红蓝后景做对照，同时检查陈列材质与首次拿起的渲染开销。
+
 使用 $curio-jewelry-workshop，给椭圆蛋面设计前高后浅的背部，保留腰棱，重新核对银座承托和拆装。
 
 使用 $curio-oil-paintings，做一对配准的动物油画，只将珍珠改成钻石；油污独立成层。
@@ -124,6 +143,8 @@ python tools/install.py --target ../my-game/.agents/skills --all
 运行时案例：[提灯首次点火卡顿](skills/curio-mechanism-workshop/references/first-interaction-performance.md)，包含原因、诊断分支、稳定灯光配置的修复及首次／重复操作验证。
 
 视觉案例：[表面碎线与过重描边](skills/curio-mechanism-workshop/references/surface-artifacts.md)，通过白狼匣、舞匣等实例区分后处理、法线、阴影与真实几何缺陷，避免为了显示问题重复重拓扑或展开 UV。
+
+宝石案例：[切面、透射与陈列](examples/faceted-gems/README.md)，包含十种切型统计、红蓝后景对照，以及烘焙发白、拿放过渡和首用编译的处理入口。
 
 ```sh
 python -m pip install -r requirements.txt
