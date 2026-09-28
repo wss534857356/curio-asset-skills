@@ -30,6 +30,12 @@ Reusable agent skills for game props, oil paintings, jewelry, relightable 2.5D c
 
 对应技能：[珠宝与玉牌](skills/curio-jewelry-workshop/SKILL.md)。
 
+## 钻石与异形裸石：切面结构、透射和陈列
+
+新增圆钻、心形、阶梯式等十种切型的结构方法，以及“反光很强却看不见后景”“陈列发白像塑料”“首次拿起编译卡顿”的定位与处理。贝塞尔曲线用于需要的轮廓；光学切面保持平面，真实面数与三角形数分别统计。
+
+查看 [切面裸石案例与红蓝后景对照](examples/faceted-gems/README.md) · [切面设计](skills/curio-jewelry-workshop/references/faceted-cuts.md) · [透射与陈列](skills/curio-jewelry-workshop/references/transmission-and-display.md)。
+
 ## 双獾药秤：降面、展 UV、烘焙与 LOD
 
 ![双獾药秤 R02：Meshy 獾雕与代码制作的称量机构](docs/images/badger-balance-assembled.png)
@@ -66,7 +72,7 @@ Reusable agent skills for game props, oil paintings, jewelry, relightable 2.5D c
 | [mesh-split-fill](skills/mesh-split-fill/SKILL.md) | 网格拆件、接缝与互补补面 | Blender 入口、几何工具、真实过程页；第三方 MIT |
 | [curio-oil-paintings](skills/curio-oil-paintings/SKILL.md) | 动物油画、配准真伪画芯、颜料与污渍 | 10 个配方、任务准备与表面生成脚本 |
 | [curio-frame-workshop](skills/curio-frame-workshop/SKILL.md) | 可复用画框、尺寸适配、动物纹章 | Blender 生成器、4 种框型、5 种纹章 |
-| [curio-jewelry-workshop](skills/curio-jewelry-workshop/SKILL.md) | 蛋面、切面宝石、玉牌与镶座 | 正背面设计规则、参数示例；无通用建模脚本 |
+| [curio-jewelry-workshop](skills/curio-jewelry-workshop/SKILL.md) | 钻石切型、蛋面、玉牌与镶座 | 平面切面、正背面、真实透射、陈列烘焙与拿放性能；无通用建模脚本 |
 | [noir-character-pipeline](skills/noir-character-pipeline/SKILL.md) | 插画人物、遮罩、形体法线与材质 | 提示词、贴图检查器、运行时调光规则 |
 | [curio-part-finishing](skills/curio-part-finishing/SKILL.md) | 连续去料、过切失败、买料与手动复装 | 玩法设计与颈圈示例；需接入目标游戏 |
 | [evolve-blender-assets](skills/evolve-blender-assets/SKILL.md) | 可复现 Blender 资产与版本比较 | 契约、候选、来源与验证脚本；适合进阶管线 |

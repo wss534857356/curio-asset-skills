@@ -1,9 +1,9 @@
 ---
 name: curio-jewelry-workshop
-description: "Design and build inspectable game gemstones, jade plaques and jewelry settings, with coordinated front/back profiles, girdles, real thickness, materials and removable mounts. Use for cabochons, faceted stones, jade pendants and gemstone jewelry; not character clothing or real-world manufacturing certification."
+description: "Design and build inspectable game diamonds, faceted gemstones, cabochons, jade plaques and settings. Covers closed cut geometry, front/back profiles, thickness, transmission, reflections and display budgets; not real-world gem grading or manufacturing certification."
 ---
 
-# 珠宝与玉牌制作
+# 珠宝、钻石切型与玉牌制作
 
 把宝石本体、背面和镶座作为同一件可翻看藏品设计。正面好看只是其中一项：背部轮廓、厚度、承托接触和拆开后的画面也要成立。
 
@@ -29,6 +29,8 @@ description: "Design and build inspectable game gemstones, jade plaques and jewe
 
 ## 把设计落实为几何
 
+钻石和异形裸石的切面排布、平面求交、心形凹口及实际面数统计，按需读 [切面结构](references/faceted-cuts.md)。贝塞尔曲线可以约束外轮廓，光学切面本身保持平面。
+
 先记录足以指导本次建模的参数：轮廓、长宽、前拱、背型／背拱、腰棱厚度、最薄处、孔位、倒角、承托区域、拆件路径及目标视角。[设计例子](assets/design-examples.json) 提供双曲面蛋面和玉牌的参数组织；它是设计模板，不是现有项目已实现的接口。
 
 - 蛋面：独立前后贝塞尔截面，经旋转或椭圆环采样形成闭合网格。曲率／弦误差大处增加采样，平缓处减少；腰棱共享位置，尖点只保留一个有效极点。
@@ -49,6 +51,8 @@ description: "Design and build inspectable game gemstones, jade plaques and jewe
 
 ## 材质与游戏效果
 
+处理通透、塑料感、陈列烘焙、拿放过渡或首次卡顿时，读 [透射与陈列](references/transmission-and-display.md)。先把几何、真实后景、反射和离屏渲染的成本分开定位。
+
 - 把网格厚度、透射、折射率和颜色衰减一起考虑；Alpha 降低不能代替宝石透射。玉石、玻璃、金属和不透明矿石分别调材质，不统一做成水晶。
 - 猫眼／星光等特殊效果若是美术近似，应随所宣称的光向或视角改变；固定画线留给贴图或已有赝品表现，不称为物性模拟。
 - 反面可按工艺设为抛光、稍粗糙或带承托平台，不机械复制正面花纹和高光。先保证结构，再决定是否需要额外纹理。
@@ -67,3 +71,5 @@ description: "Design and build inspectable game gemstones, jade plaques and jewe
 调用例：`$curio-jewelry-workshop 把现有椭圆蛋面改成前高后浅的双曲面，保留腰棱和银座身份，重新核对承托与拆装。`
 
 调用例：`$curio-jewelry-workshop 制作可翻看的玉牌，正背面以平面为主，带实体厚度、圆角和挂绳孔。`
+
+调用例：`$curio-jewelry-workshop 制作圆钻、心形和阶梯式裸石，保留平面切面与真实亭部，并用正背面红蓝后景对照验证透射。`

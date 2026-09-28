@@ -1,0 +1,78 @@
+{
+  "date": "2026-09-28",
+  "scope": "source-game artifacts inspected for this documentation update; models are not distributed here",
+  "measurement": "GLB draw counts and actual file sizes; optical-face counts from the authored catalogue",
+  "entries": [
+    {
+      "cut": "pear",
+      "name": "梨形",
+      "triangles": 108,
+      "bytes": 13228,
+      "authoredFacetsIncludingGirdle": 72
+    },
+    {
+      "cut": "round",
+      "name": "圆钻",
+      "triangles": 110,
+      "bytes": 13084,
+      "authoredFacetsIncludingGirdle": 73
+    },
+    {
+      "cut": "oval",
+      "name": "椭圆",
+      "triangles": 110,
+      "bytes": 13168,
+      "authoredFacetsIncludingGirdle": 73
+    },
+    {
+      "cut": "marquise",
+      "name": "马眼",
+      "triangles": 110,
+      "bytes": 13132,
+      "authoredFacetsIncludingGirdle": 85
+    },
+    {
+      "cut": "heart",
+      "name": "心形",
+      "triangles": 110,
+      "bytes": 13132,
+      "authoredFacetsIncludingGirdle": 89
+    },
+    {
+      "cut": "princess",
+      "name": "公主方",
+      "triangles": 66,
+      "bytes": 8280,
+      "authoredFacetsIncludingGirdle": 57
+    },
+    {
+      "cut": "emerald",
+      "name": "祖母绿式",
+      "triangles": 128,
+      "bytes": 14416,
+      "authoredFacetsIncludingGirdle": 65
+    },
+    {
+      "cut": "asscher",
+      "name": "阿斯切",
+      "triangles": 140,
+      "bytes": 15496,
+      "authoredFacetsIncludingGirdle": 66
+    },
+    {
+      "cut": "cushion",
+      "name": "枕形",
+      "triangles": 158,
+      "bytes": 17788,
+      "authoredFacetsIncludingGirdle": 97
+    },
+    {
+      "cut": "rose",
+      "name": "玫瑰式",
+      "triangles": 58,
+      "bytes": 7896,
+      "authoredFacetsIncludingGirdle": 37
+    }
+  ],
+  "totalBytes": 129620
+}

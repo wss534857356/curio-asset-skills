@@ -2,6 +2,8 @@
 
 以下 10 张 PNG 来自原项目已保存的渲染／工作台截图，未重画、拼接、裁切或补出不存在的效果。公开文件移除了 PNG 中的作者文件路径、渲染时刻等非显示元数据，像素和色彩管理信息保持不变。另有 1 张 SVG 从模型实际 UV 数据生成。整理日期为 2026-09-26，历史截图不代表本次重新运行了原游戏。
 
+2026-09-28 另补充 2 张宝石透射控制图，合计 12 张 PNG。新增图片来自已保存的项目检查记录，原文件不含额外 PNG 元数据，按原字节复制；本次没有重新生成对应光学实验。
+
 | 文件 | 来源版本 | 展示内容与边界 |
 |---|---|---|
 | [deer-vessel-assembled.png](deer-vessel-assembled.png) | D02 mesh-split-r01 / candidate-r09 / hero | 眠鹿圣油壶六足版本；Meshy 来源模型、本地拆件后的整体渲染 |
@@ -15,6 +17,8 @@
 | [badger-sculpt-high.png](badger-sculpt-high.png) | 同上 / badger-preview | 单獾形体生成阶段保存的灰模预览，不是低模线框 |
 | [badger-balance-game.png](badger-balance-game.png) | 原项目 heron-live / shop-badger-retexture | R02 游戏称量界面历史截图 |
 | [badger-uv-layout.svg](badger-uv-layout.svg) | 本次读取 badger-mid 与 badger-uv 的 TEXCOORD_0 和索引 | 真实 UV 三角边布局对照；不代表已检验零重叠或零拉伸 |
+| [gem-transmission-red.png](gem-transmission-red.png) | gem-transmission / after-production-front-red | 长阶切型、红色后景与白条的固定相机透射检查；非完整光线追踪 |
+| [gem-transmission-blue.png](gem-transmission-blue.png) | gem-transmission / after-production-front-blue | 同一模型与反射设置，仅改变后景颜色；不代表珠宝真实性鉴定 |
 
 D02 源文件名为 `Meshy_AI_Ceramic_Stag_Vessel_0914083449_texture.glb`。分件版本整件 87,293 个三角形，无动画；继承源模型部分开口与相交，不能据渲染推断水密、无缺陷或适合制造。该模型文件不随集合分发。来源工具署名：**Meshy**。
 
